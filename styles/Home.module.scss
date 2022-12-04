@@ -1,0 +1,366 @@
+$color1: #110E09;
+$color2: #141A26;
+$color3: #293950;
+$color4: #C5881E;
+$color5: #C05C0E;
+$color6: #F7E2AD;
+$colorFeatureWork:#0b2838;
+$color6meetourteam:#083248;
+$colorcontactus:#031b28;
+$colorfont :#e89c31;
+$colorinputbox: #083248;
+$colorPureWhite:#ffffff;
+$fonts: 'Poppins', Helvertica, sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textcolor{
+  color:$colorfont;
+}
+
+.container {
+  font-family: $fonts;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomMat{
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10%;
+  color:$colorfont;
+
+}
+.brand {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.brandLogo{
+  grid-area: 1 / 1 / 2 / 2; 
+}
+.branddropdown{
+  position: absolute;
+  padding-left: 94%;
+  top: 3vh;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.welcomMatButtons{
+  position: relative;
+  justify-content: center;
+padding-left: 46%;
+padding-top: 10%;
+}
+
+.teamDetails{
+  display: flex;
+    
+  justify-content: space-around;     
+
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+}
+.aboutUs{
+  background-color: $colorFeatureWork;
+// height: 30vh;
+display: flex;
+    
+justify-content: space-between;     
+
+height: 100%;
+padding: 15px;
+gap: 500px;
+}
+.aboutUstext{
+ color: $colorfont;
+ padding-left: 2%;
+}
+.mediumSection{
+  color: $colorFeatureWork;
+  display: flex;
+  justify-content: space-evenly;     
+  height: 100%;
+  padding: 15px;
+  gap: 5px;
+
+}
+.mediumSectionsingle{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.mediumSectionsingletext{
+  grid-area: 1 / 1 / 2 / 2;
+  position: absolute;
+  justify-content: center;  
+
+}
+.mediumSectionsinglerow1{
+  position: absolute;
+  justify-content: center;  
+
+  grid-area: 2 / 1 / 3 / 2;
+  padding-top: 10%;
+}
+.mediumSectionFeature{
+  background-color: $colorFeatureWork;
+  // justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+ 
+  
+}
+.mediumSectionFeaturetext{
+  grid-area: 1 / 1 / 2 / 4; 
+
+}
+.mediumSectionFeaturerow1{
+  grid-area: 2 / 1 / 3 / 4;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: space-evenly;  
+}
+
+.mediumSectionPricing{
+  background-color: #fafafa;
+  // justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+ 
+
+}
+.mediumSectionPricingrow1{ 
+  grid-area: 1 / 1 / 2 / 4; 
+}
+.mediumSectionPricingrow2{ 
+  grid-area: 2 / 1 / 3 / 4;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: space-evenly;     
+}
+  
+.mediumSectionsingle2nd {
+  color: $colorfont;
+  position: relative;
+  margin: 0;
+  text-shadow: 1px 1px 1px #3c5c5e;
+  z-index: 2;
+}
+.mediumSectionsingle2ndtext{
+  position: absolute;
+}
+.bgWrap {
+  overflow: hidden;
+  z-index: -2;
+  }
+.meetTeam{
+  background-color: $color6meetourteam;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  padding-bottom: 5%;
+}
+.meetTeamHeader{
+  grid-area: 1 / 1 / 2 / 6;
+}
+.meetTeamrow1{
+  grid-area: 2 / 2 / 3 / 5;
+  padding-bottom: 1%;
+}
+.meetTeamrow2{
+  grid-area: 3 / 2 / 4 / 5;
+}
+.teamImage{
+  padding-left: 7vh;
+  padding-right: 6vh;
+
+}
+.girdContactus{
+  display: grid; 
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+  gap: 0px;
+  height: 100%;
+}
+.contactFormleftform{
+  color: $colorfont;
+  grid-row-start: 1;
+  grid-column-start: 5;
+
+  grid-row-end: 3;
+  grid-column-end: 7;
+}
+
+.contactFormrightform{
+  color: $colorfont;
+  grid-row-start: 1;
+  grid-column-start: 2;
+
+  grid-row-end: 3;
+  grid-column-end: 4;
+}
+
+.card1{
+  color: $colorfont;
+  padding-bottom: 2rem;
+  padding-right: 4rem;
+
+}
+.Contactus {
+  background-color: $colorcontactus;
+  color: $colorfont;
+  background-color: $colorcontactus;
+
+}
+
+.inputBoxstyle {
+  background-color: $colorinputbox;
+  border-color: $colorfont;
+  padding: 0% 15%;
+
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  color: $colorfont;
+  background-color: $colorcontactus;
+
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.backgroundCol1 {
+  background-color: #c05c0e;
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
