@@ -274,13 +274,11 @@ export default function Home() {
           <img className={styles.teamImage} src="/OIP.png" alt="placehold Logo" />
           <img className={styles.teamImage} src="/OIP.png" alt="placehold Logo" />
           <img className={styles.teamImage} src="/OIP.png" alt="placehold Logo" />
-
         </div>
         <div className={styles.meetTeamrow2}>
           <img className={styles.teamImage} src="/OIP.png" alt="placehold Logo" />
           <img className={styles.teamImage} src="/OIP.png" alt="placehold Logo" />
           <img className={styles.teamImage} src="/OIP.png" alt="placehold Logo" />
-
         </div>
 
 
