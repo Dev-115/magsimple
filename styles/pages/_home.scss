@@ -1,0 +1,265 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.section_hero {
+    @include default_vwh();
+    @include flex_prop1();
+    @include flex_center();
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 11.6%, rgba(0, 0, 0, 0.458333) 65.01%, rgba(0, 0, 0, 0) 100%);
+    @include img_default();
+
+    .flex_box {
+        .flex_item {
+            // width: 461px;
+            @include flex_prop1();
+            @include flex_center();
+
+            h1 {
+                width: 461px;
+                font-size: 64px;
+                line-height: 80px;
+                text-align: center;
+                font-weight: 400;
+                color: white;
+
+                &.hero_title02 {
+                    width: 800px;
+                }
+            }
+
+            button {
+                width: 40%;
+                height: 65px;
+            }
+        }
+    }
+}
+
+.section_hero02 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 11.6%, rgba(0, 0, 0, 0.458333) 65.01%, rgba(0, 0, 0, 0) 100%);
+    @include img_hero();
+
+    .flex_box {
+        .flex_item {
+            button {
+                width: 25%;
+            }
+        }
+
+    }
+}
+
+.section_services {
+    @include default_vwh();
+    @include flex_prop2();
+    @include flex_center();
+    background: #F2F3F3;
+    // Fix given Height of 100vh
+    height: 100%;
+    padding: 40px 0;
+
+    .flex_box {
+        @include flex_prop2();
+        @include flex_center();
+        max-width: 1600px;
+        gap: 40px;
+
+        .flex_item {
+            @include flex_prop2();
+            @include flex_center();
+
+            h2 {
+                width: 500px;
+                font-size: 48px;
+                line-height: 59.52px;
+                text-align: center;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            &:last-child {
+                width: 100%;
+            }
+
+            button {
+                width: 160px;
+                height: 60px;
+                border-radius: 70px;
+            }
+        }
+
+        // Image WxH = 800px x 493px
+
+        .flex_box_nested {
+            // Container for Services
+            @include flex_prop2();
+            width: inherit;
+            overflow: hidden;
+
+            &>.flex_item:nth-child(2){
+                flex-direction: column-reverse;
+            }
+
+            // Container for Items
+            .flex_item {
+                // ay sori grid pala sagot dito hahaha - bert
+                display: flex;
+                flex-direction: column;
+                
+                @media (min-width: 1200px) {
+                    display: grid;
+                    // grid-auto-flow : column for auto adding columns to the grid container
+                    grid-auto-flow: column;
+                    // fr is a flex unit that looks at all children by border-box. 1fr would keep everything evenly spaced.
+                    grid-auto-columns: 1fr;
+                }
+                padding: 0px;
+
+                // The parent and ALL its DIRECT children 
+                // & > * {
+                //     
+                // }
+
+                // Image CSS
+                .flex_img {
+                    // flex: 0 0 50%;
+                    // flex-grow: 1;
+                    height: 533px;
+                    @media (min-width: 1200px) {
+                        height: 100%;
+                    }
+        
+                    align-self: stretch;
+
+
+                    &:first-child {
+                        background: url();
+                        @include img_default();
+                    }
+
+                }
+                &:nth-child(2) .flex_img {
+                    background: url();
+                    @include img_default();
+                }
+                
+                // Last Image needed
+                &:last-child {
+
+                    .flex_img {
+                        background: url();
+                        @include img_default();
+                    }
+                }
+
+                .flex_subitem {
+                    // flex: 0 0 47.4%;
+                    // flex-grow: 1;
+                    padding: 1.5rem;
+                    border: 1px solid $color1;
+
+                    height: auto;
+ 
+
+                    h2 {
+                        text-align: left;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        
+                        width: 100%;
+                        li {
+                            // ano to hahahaha - bert
+                            // gagi kita ko na. Mali property mo sa mixin. Justify Content dapat tapos Space Between.
+                            // @include flex_prop1();
+                            // gumawa ako ng mixin para sa space between *flex-<direction>-between
+                            @include flex-row-between;
+                            // 
+                            width: 100%;
+                            // eto yung fix para di sumobra yung list item.
+                            box-sizing: border-box;
+                            padding: 1rem;
+                            border-bottom: 1px solid $color1;
+                            list-style: none;
+                            
+                            // -----------------
+                            // No need for these
+                            // -----------------
+                            // &:first-child {
+                            //     border-top: .5px solid $color1;
+                            // }
+
+                            // span:first-child {
+                            //     flex: 0 0 90%;
+                            // }
+
+                            // span:last-child {
+                            //     flex: 0 0 10%;
+                            // }
+
+                        }
+                    }
+
+                    p {
+                        width: 66%;
+                        size: 1rem;
+                        line-height: 1.35rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.section_testimonials {
+    @include flex_prop2();
+    @include flex_center();
+    padding: 50px 0px;
+    background: #C9CBCF;
+
+    .flex_box {
+        @include flex_prop2();
+        @include flex_center();
+        max-width: 1600px;
+        gap: 24px;
+
+        .flex_item {
+
+
+            .flex_box_nested {
+                @include flex_prop1();
+                @include flex_center();
+                gap: 20px;
+
+                .flex_item {
+                    width: 20vw;
+                    height: 10vh;
+                    padding: 10px 20px;
+                    background: #53535302;
+                    border: 1px solid #F2F3F3;
+                    // border-radius: 25px;
+                }
+
+                p {
+                    font-size: 24px;
+                    line-height: 29.05px;
+                    font-weight: 700;
+                }
+            }
+
+            h2 {
+                width: 550px;
+                font-size: 48px;
+                font-weight: 400;
+                line-height: 59.52px;
+                text-align: center;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+}
