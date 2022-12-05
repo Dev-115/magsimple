@@ -293,14 +293,23 @@ export default function Home() {
         <div className={styles.girdContactus}>
 
           <div className={styles.contactFormrightform}>
-            <label>Name</label>
-            <input className={styles.inputBoxstyle} />
+            <form method="post" action="./api/hello">
+              <label>Name </label>
+              <input className={styles.inputBoxstyle} name="Name" id="username" />
+              <br />
+              <label>Email </label>
+              <input className={styles.inputBoxstyle} name="Email" id="username" />
+              <br />
+              <label>Message </label>
+              <textarea className={styles.inputBoxstyle} name="Message" id="username"></textarea>
+              <br />
 
-            <label>Email</label>
-            <input className={styles.inputBoxstyle} />
+              <input type={'checkbox'} required />
+              <label>I accept the terms and condition of Magg.INC</label>
+              <br />
 
-            <label>Message</label>
-            <textarea className={styles.inputBoxstyle} ></textarea>
+              <button type='submit'>submit</button>
+            </form>
 
           </div>
 
