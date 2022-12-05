@@ -18,6 +18,7 @@ $fonts: 'Poppins', Helvertica, sans-serif;
   justify-content: center;
 }
 
+
 .textcolor{
   color:$colorfont;
 }
@@ -252,7 +253,7 @@ gap: 500px;
   background-color: $colorcontactus;
 
 }
-
+//stock css can be removed
 .footer a {
   display: flex;
   justify-content: center;
