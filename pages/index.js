@@ -50,7 +50,7 @@ export default function Home() {
           <bold>+1(555) 000-0000</bold>
         </div>
       </div>
-      
+
       <div className="">
 
         <div className=""><h2>ABOUT US</h2></div>
@@ -271,14 +271,23 @@ export default function Home() {
         <div className="">
 
           <div className="">
-            <label>Name</label>
-            <input className="" />
+            <form method="post" action="./api/hello">
+              <label>Name </label>
+              <input className="" name="Name" id="username" />
+              <br />
+              <label>Email </label>
+              <input className="" name="Email" id="username" />
+              <br />
+              <label>Message </label>
+              <textarea className="" name="Message" id="username"></textarea>
+              <br />
 
-            <label>Email</label>
-            <input className="" />
+              <input type={'checkbox'} required />
+              <label>I accept the terms and condition of Magg.INC</label>
+              <br />
 
-            <label>Message</label>
-            <textarea className="" ></textarea>
+              <button type='submit'>submit</button>
+            </form>
 
           </div>
 
