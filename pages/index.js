@@ -46,22 +46,22 @@ export default function Home() {
       />
 
       <div className={styles.teamDetails}>
-        <p href="" className={styles.card1}>
+        <div href="" className={styles.card1}>
           <i className="bi bi-envelope"></i>
           <h2>Email</h2>
           <p>Our friendly team is here to help.</p>
           <bold>hi@untitled.com</bold>
-        </p>
+        </div>
 
-        <p href="" className={styles.card1}>
+        <div href="" className={styles.card1}>
           <i className="bi bi-geo-alt"></i>
           <h2>Office</h2>
           <p>Come say hello at our office HQ.</p>
           <bold>100 smith street collingwood VIC 3066AU</bold>
 
-        </p>
+        </div>
 
-        <p href=""
+        <div href=""
           className={styles.card1}
         >
 
@@ -69,7 +69,7 @@ export default function Home() {
           <h2>Phone</h2>
           <p>Monday to Friday from 8am to 5pm.</p>
           <bold>+1(555) 000-0000</bold>
-        </p>
+        </div>
       </div>
       <div className={styles.aboutUs}>
 
@@ -87,32 +87,32 @@ export default function Home() {
 
       <div className={styles.mediumSection}>
 
-        <p href="" className={styles.midcard1}>
+        <div href="" className={styles.midcard1}>
           <i className="bi bi-box-fill"></i>
           <h2 className={styles.textcolor}>Medium lenght section heading goes here</h2>
           <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat.</code>
-        </p>
+        </div>
 
-        <p href="" className={styles.midcard1}>
+        <div href="" className={styles.midcard1}>
           <i className="bi bi-box-fill"></i>
           <h2 className={styles.textcolor}>Medium lenght section heading goes here</h2>
           <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat.</code>
-        </p>
+        </div>
 
-        <p href="" className={styles.midcard1}>
+        <div href="" className={styles.midcard1}>
           <i className="bi bi-box-fill"></i>
           <h2 className={styles.textcolor}>Medium lenght section heading goes here</h2>
           <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
             minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat.</code>
-        </p>
+        </div>
 
       </div>
 
