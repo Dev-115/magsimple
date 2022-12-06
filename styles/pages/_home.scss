@@ -2,263 +2,539 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-.section_hero {
-    @include default_vwh();
-    @include flex_prop1();
-    @include flex_center();
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 11.6%, rgba(0, 0, 0, 0.458333) 65.01%, rgba(0, 0, 0, 0) 100%);
-    @include img_default();
+.section_body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 
-    .flex_box {
-        .flex_item {
-            // width: 461px;
-            @include flex_prop1();
+    .section_hero {
+        @include flex_prop0();
+        @include flex_center();
+        @include default_vwh();
+
+        // Temporary IMG not loading
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 11.6%, rgba(0, 0, 0, 0.458333) 70%, rgba(0, 0, 0, 0.212) 80%), url($bg_hero);
+        // background: url($bg_hero);
+        background-size: 100%;
+        background-position: top center;
+        object-fit: contain;
+
+        .hero_container {
+            @include default_vwh();
+            @include flex_prop2();
             @include flex_center();
+            @include default_maxWH();
+            gap: 20px;
 
             h1 {
-                width: 461px;
-                font-size: 64px;
-                line-height: 80px;
-                text-align: center;
-                font-weight: 400;
-                color: white;
-
-                &.hero_title02 {
-                    width: 800px;
-                }
+                // Format (Font, Font Size, Font Weight, LineHeight, TextTransform, Color)
+                @include var_fonts(inherit, 56px, 700, 67.2px, uppercase, $color5);
+                // Format ((n)px Margins, (n)px Padding)
+                @include var_spacings(0, 0);
             }
 
-            button {
-                width: 40%;
-                height: 65px;
-            }
-        }
-    }
-}
-
-.section_hero02 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 11.6%, rgba(0, 0, 0, 0.458333) 65.01%, rgba(0, 0, 0, 0) 100%);
-    @include img_hero();
-
-    .flex_box {
-        .flex_item {
-            button {
-                width: 25%;
-            }
-        }
-
-    }
-}
-
-.section_services {
-    @include default_vwh();
-    @include flex_prop2();
-    @include flex_center();
-    background: #F2F3F3;
-    // Fix given Height of 100vh
-    height: 100%;
-    padding: 40px 0;
-
-    .flex_box {
-        @include flex_prop2();
-        @include flex_center();
-        max-width: 1600px;
-        gap: 40px;
-
-        .flex_item {
-            @include flex_prop2();
-            @include flex_center();
-
-            h2 {
-                width: 500px;
-                font-size: 48px;
-                line-height: 59.52px;
-                text-align: center;
-                font-weight: 400;
-                margin: 0;
+            p {
+                @include var_fonts(inherit, 18px, 400, 27px, capitalize, $color5);
             }
 
-            &:last-child {
-                width: 100%;
-            }
-
-            button {
-                width: 160px;
-                height: 60px;
-                border-radius: 70px;
-            }
-        }
-
-        // Image WxH = 800px x 493px
-
-        .flex_box_nested {
-            // Container for Services
-            @include flex_prop2();
-            width: inherit;
-            overflow: hidden;
-
-            &>.flex_item:nth-child(2){
-                flex-direction: column-reverse;
-            }
-
-            // Container for Items
-            .flex_item {
-                // ay sori grid pala sagot dito hahaha - bert
-                display: flex;
-                flex-direction: column;
-                
-                @media (min-width: 1200px) {
-                    display: grid;
-                    // grid-auto-flow : column for auto adding columns to the grid container
-                    grid-auto-flow: column;
-                    // fr is a flex unit that looks at all children by border-box. 1fr would keep everything evenly spaced.
-                    grid-auto-columns: 1fr;
-                }
-                padding: 0px;
-
-                // The parent and ALL its DIRECT children 
-                // & > * {
-                //     
-                // }
-
-                // Image CSS
-                .flex_img {
-                    // flex: 0 0 50%;
-                    // flex-grow: 1;
-                    height: 533px;
-                    @media (min-width: 1200px) {
-                        height: 100%;
-                    }
-        
-                    align-self: stretch;
-
-
-                    &:first-child {
-                        background: url();
-                        @include img_default();
-                    }
-
-                }
-                &:nth-child(2) .flex_img {
-                    background: url();
-                    @include img_default();
-                }
-                
-                // Last Image needed
+            .hero_item {
                 &:last-child {
-
-                    .flex_img {
-                        background: url();
-                        @include img_default();
-                    }
+                    @include flex_prop1();
+                    @include flex_center();
+                    gap: 20px;
                 }
-
-                .flex_subitem {
-                    // flex: 0 0 47.4%;
-                    // flex-grow: 1;
-                    padding: 1.5rem;
-                    border: 1px solid $color1;
-
-                    height: auto;
- 
-
-                    h2 {
-                        text-align: left;
-                    }
-
-                    ul {
-                        margin: 0;
-                        padding: 0;
-                        
-                        width: 100%;
-                        li {
-                            // ano to hahahaha - bert
-                            // gagi kita ko na. Mali property mo sa mixin. Justify Content dapat tapos Space Between.
-                            // @include flex_prop1();
-                            // gumawa ako ng mixin para sa space between *flex-<direction>-between
-                            @include flex-row-between;
-                            // 
-                            width: 100%;
-                            // eto yung fix para di sumobra yung list item.
-                            box-sizing: border-box;
-                            padding: 1rem;
-                            border-bottom: 1px solid $color1;
-                            list-style: none;
-                            
-                            // -----------------
-                            // No need for these
-                            // -----------------
-                            // &:first-child {
-                            //     border-top: .5px solid $color1;
-                            // }
-
-                            // span:first-child {
-                            //     flex: 0 0 90%;
-                            // }
-
-                            // span:last-child {
-                            //     flex: 0 0 10%;
-                            // }
-
-                        }
-                    }
-
-                    p {
-                        width: 66%;
-                        size: 1rem;
-                        line-height: 1.35rem;
-                    }
-                }
-
             }
         }
     }
-}
 
-.section_testimonials {
-    @include flex_prop2();
-    @include flex_center();
-    padding: 50px 0px;
-    background: #C9CBCF;
-
-    .flex_box {
-        @include flex_prop2();
+    .section_contact {
+        @include var_vwh(100vw, 250px);
+        @include flex_prop0();
         @include flex_center();
-        max-width: 1600px;
-        gap: 24px;
+        background: #fff;
 
-        .flex_item {
+        .contact_container {
+            @include default_vwh();
+            @include flex_prop1();
+            @include flex_center();
+            @include default_maxWH();
+            gap: 20%;
 
-
-            .flex_box_nested {
-                @include flex_prop1();
+            .contact_item {
+                @include flex_prop2();
                 @include flex_center();
-                gap: 20px;
+                gap: 10px;
 
-                .flex_item {
-                    width: 20vw;
-                    height: 10vh;
-                    padding: 10px 20px;
-                    background: #53535302;
-                    border: 1px solid #F2F3F3;
-                    // border-radius: 25px;
+                i,
+                p,
+                h2 {
+                    @include var_spacings(0, 0);
+                }
+
+                .contact_subitem {
+                    @include var_icons();
+                    @include flex_prop1();
+                    @include flex_center();
+                    color: $color5;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+
+                h2 {
+                    color: $color5;
+                }
+            }
+        }
+    }
+
+    .section_aboutus {
+        @include var_vwh(100vw, 391.6px);
+        @include flex_prop0();
+        @include flex_center();
+        background: $color2;
+
+        .aboutus_container {
+            @include default_vwh();
+            @include flex_prop1();
+            @include flex_center();
+            @include default_maxWH();
+
+            .aboutus_item {
+                flex: 0 0 50%;
+
+                h1 {
+                    @include var_fonts(inherit, 48px, 700, 57.6px, uppercase, $color5);
+                    @include var_spacings(0 0 80px, 0);
                 }
 
                 p {
-                    font-size: 24px;
-                    line-height: 29.05px;
-                    font-weight: 700;
+                    @include var_fonts(inherit, 18px, 400, 27px, none, $color5);
                 }
             }
+        }
 
-            h2 {
-                width: 550px;
-                font-size: 48px;
-                font-weight: 400;
-                line-height: 59.52px;
+    }
+
+    .section_services {
+        @include var_vwh(100vw, 600px);
+        @include flex_prop0();
+        @include flex_center();
+        @include var_spacings(0, 0);
+
+        .services_container {
+            @include flex_prop1();
+            @include flex_row_between();
+            @include default_maxWH();
+            width: 100%;
+
+            .services_item {
+                @include flex_prop2();
+                @include flex_center();
+                flex: 0 0 30%;
                 text-align: center;
-                font-weight: 400;
-                margin: 0;
+
+                i {
+                    font-size: 30px;
+                }
+
+                h2 {
+                    @include var_fonts(inherit, 32px, 700, 41.6px, capitalize, $color5);
+                }
+
+                code {
+                    @include var_fonts(inherit, 16px, 400, 24px, none, $color3);
+                }
+            }
+        }
+    }
+
+    .section_banner {
+        @include var_vwh(100vw, 448px);
+        @include flex_prop0();
+        @include flex_center();
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.562) 100%, rgba(0, 0, 0, 0.562) 100%), url($bg_banner01);
+        // Mixins need
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .banner_container {
+            @include flex_prop2();
+            @include flex_center();
+            @include default_maxWH();
+            gap: 20px;
+
+            h1,
+            code {
+                @include var_spacings(10px 0, 0);
+                text-align: center;
+            }
+
+            h1 {
+                @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color5);
+            }
+
+            code {
+                @include var_fonts(inherit, 16px, 400, 24px, none, $color5);
+            }
+
+            .banner_item {
+                &:last-child {
+                    @include flex_prop1();
+                    gap: 20px;
+                }
+            }
+        }
+
+    }
+
+    .section_banner02 {
+        @include var_vwh(100vw, 300px);
+        @include flex_prop0();
+        @include flex_center();
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.562) 100%, rgba(0, 0, 0, 0.562) 100%), url($bg_banner02);
+        // Mixins need
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .banner_container {
+            @include flex_prop1();
+            @include flex_center();
+            @include default_maxWH();
+
+            h1,
+            p {
+                @include var_spacings(10px 0, 0);
+                text-align: center;
+            }
+
+            h1 {
+                @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color5);
+            }
+
+            p {
+                @include var_fonts(inherit, 16px, 400, 24px, none, $color5);
+            }
+
+            .banner_item {
+
+                &:last-child {
+                    @include flex_prop1();
+                    gap: 20px;
+                }
+            }
+        }
+
+    }
+
+    .section_featwork {
+        @include var_vwh(100vw, 750px);
+        @include flex_prop0();
+        @include flex_center();
+        background: $color2;
+
+        .featwork_container {
+            @include flex_prop2();
+            @include flex_center();
+            @include default_maxWH();
+            gap: 20px;
+
+            .featwork_item {
+
+                &:first-child {
+
+                    h1,
+                    p {
+                        @include var_spacings(0 0 10px, 0);
+                        text-align: center;
+                    }
+
+                    h1 {
+                        @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color5);
+                    }
+
+                    p {
+                        @include var_fonts(inherit, 16px, 400, 24px, none, $color5);
+                    }
+                }
+
+                &:last-child {
+                    @include flex_prop1();
+                    @include flex_row_between();
+                    gap: 10px;
+
+                    img {
+                        width: 350px;
+                        height: 500px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_prices {
+        @include var_vwh(100vw, 700px);
+        @include flex_prop0();
+        @include flex_center();
+        background: #fff;
+
+        .prices_container {
+            @include flex_prop2();
+            @include flex_center();
+            @include default_maxWH();
+            gap: 20px;
+
+            .prices_item {
+
+                h1,
+                h2,
+                h3,
+                h4,
+                p {
+                    @include var_spacings(10px 0 0, 0);
+                }
+
+                h1,
+                h2,
+                h3 {
+                    text-align: center;
+                }
+
+                h1 {
+                    margin: 0;
+                    @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color5);
+                }
+
+                i,
+                p {
+                    @include var_fonts(inherit, 16px, 400, 24px, none, $color3);
+                }
+
+                i {
+                    font-size: 20px;
+                    color: green;
+                }
+
+                &:first-child {
+                    h1 {
+                        text-align: center;
+                    }
+                }
+
+                &:last-child {
+                    @include flex_prop1();
+                    @include flex_spaceeven();
+                    gap: 50px;
+
+                    .prices_subitem {
+                        @include flex_prop2();
+                        // @include flex_();
+                        @include var_vwh(300px, 450px);
+                        @include border_style();
+                        @include var_spacings(0, 20px 30px);
+
+                        .prices_title {
+                            flex: 0 0 30%;
+                        }
+
+                        .prices_content {
+                            flex: 0 0 60%;
+                        }
+
+                        .prices_footer {
+                            flex: 0 0 10%;
+
+                            .btn_primary {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section_team {
+        @include var_vwh(100vw, 100%);
+        @include flex_prop0();
+        @include flex_center();
+        @include var_spacings(0, 60px 0);
+        background: $color2;
+
+        .team_container {
+            @include flex_prop2();
+            @include flex_center();
+            @include default_maxWH();
+
+            .team_item {
+                h1 {
+                    @include var_spacings(0, 0);
+                    @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color5);
+                }
+
+                h1,
+                h2,
+                h3,
+                p {
+                    text-align: center;
+                }
+
+                i,
+                p {
+                    @include var_fonts(inherit, 16px, 400, 24px, none, $color6);
+                }
+
+                &:last-child {
+                    @include flex_prop1();
+                    @include flex_center();
+
+                    .grid_item {
+                        @include var_vwh(400px, 450px);
+                        @include flex_prop1();
+                        @include flex_center();
+                        @include var_spacings(0, 10px);
+                        // Wrapper for Position absolute
+                        position: relative;
+                        overflow: hidden;
+
+                        img {
+                            @include var_vwh(400px, 450px);
+                            object-fit: cover;
+                            object-position: bottom center;
+                        }
+
+                        .gird_subitem {
+                            @include var_vwh(300px, 200px);
+                            @include var_spacings(0, 10px 20px);
+                            // Position Absolute for Text
+                            position: absolute;
+                            top: 25%;
+                            left: 50%;
+                            transform: translate(-50%, 50%);
+                            background: $color5;
+                            z-index: 1;
+
+                            p {
+                                @include var_spacings(10px 0, 0);
+                                text-align: left;
+                            }
+
+                            .card_title {
+                                p {
+                                    @include var_fonts(inherit, 29px, 700, 24px, capitalize, $color1);
+                                }
+                            }
+
+                            .card_content {
+                                p {
+                                    @include var_fonts(inherit, 16px, 400, 24px, none, $color3);
+                                    @include var_spacings(0 0 20px, 0);
+                                }
+                            }
+
+                            .card_links {
+                                i {
+                                    @include var_fonts(inherit, 20px, 400, 24px, none, $color3);
+                                    @include var_spacings(0 5px, 0);
+
+                                    &:first-child {
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section_contactus {
+        @include default_vwh();
+        @include flex_prop0();
+        @include flex_center();
+        @include var_spacings(0, 0);
+        background: $color1;
+
+        .contactus_container {
+            @include default_maxWH();
+            @include flex_prop1();
+            @include flex_center();
+            .contactus_item {
+                @include flex_prop2();
+                gap: 20px;
+                flex: 0 0 70%;
+
+                &:last-child {
+                    flex: 0 0 30%;
+                }
+
+                h1 {
+                    @include var_spacings(0, 0);
+                    @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color6);
+                }
+
+                h2 {
+                    @include var_fonts(inherit, 32px, 400, 41.6px, capitalize, $color6);
+                }
+
+                h3 {
+                    @include var_fonts(inherit, 24px, 400, 41.6px, capitalize, $color6);
+                }
+
+                i,
+                p,
+                label,
+                bold {
+                    @include var_fonts(inherit, 20px, 400, 24px, none, $color6);
+                    // @include var_spacings(0 0 20px, 0);
+                }
+
+                .details_item {
+                    @include flex_prop2();
+                    margin: 0;
+                }
+
+                .contactus_subitem form {
+                    @include flex_prop2();
+                    // @include flex_leftcenter();
+
+                    label {
+                        margin: 20px 0 0 0;
+
+                        &:first-child{
+                            margin: 0;
+                        }
+                    }
+
+                    input, textarea, input[type='checkbox'] {
+                        border: 1px solid $color5;
+                        border-radius: 5px;
+                        background-color: $color3;
+                        color: $color6;
+                    }
+
+                    input, textarea {
+                        width: 80%;
+                        height: 40px;
+                        padding: 0 15px;
+                    }
+
+                    input[type='checkbox'] {
+                        width: 20px;
+                        height: 20px;
+                        
+                    }
+
+                    textarea {
+                        height: 300px;
+                        resize: none;
+                    }
+                }
             }
         }
     }

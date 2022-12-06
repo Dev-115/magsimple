@@ -31,18 +31,22 @@ export default function Header() {
   const [dropDown, setdropDown] = React.useState(false);
 
   return (
-    <header className={styles.brand}>
-      <nav>
-        <div className={styles.brandLogo}>
+    <header className="main_nav">
+      <nav className="nav_box">
+        <div className="nav_item">
           <h3>Logo</h3>
         </div>
-        <div className={styles.branddropdown}>
-          <button> button</button>
-          <button onClick={() => setdropDown(!dropDown)} className="dropbtn"><i className="bi bi-list"></i></button>
+        <div></div>
+        <div className="nav_item">
+          <button className="btn_primary"> button</button>
         </div>
-        {dropDown ? (<div>        {navLinks.map((link, index) => {
+        {/* <div className="nav_item">
+          <button onClick={() => setdropDown(!dropDown)} className="dropbtn btn_secondary"><i className="bi bi-list"></i></button>
+        </div> */}
+      </nav>
+      {/* {dropDown ? (<div>        {navLinks.map((link, index) => {
           return (
-            <div id="myDropdown" key={index} className="branddropdowpcontent">
+            <div id="myDropdown" key={index} className="">
               <ul>
                 <Link href={link.path}>
                   <li key={index}>{link.name}</li>
@@ -50,10 +54,7 @@ export default function Header() {
               </ul>
             </div>
           );
-        })}</div>) : null}
-
-      </nav>
-
+        })}</div>) : null} */}
     </header >
   );
 }

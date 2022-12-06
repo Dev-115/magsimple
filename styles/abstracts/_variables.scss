@@ -2,9 +2,32 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 // Color Palette =====================
-$color1: #110E09;
-$color2: #141A26;
-$color3: #293950;
-$color4: #C5881E;
-$color5: #C05C0E;
-$color6: #F7E2AD;
+$color0: #0C0E0D;
+$color1: #031B28;
+$color2: #0B2838;
+$color3: #083248;
+$color4: #324249;
+$color5: #E89C31;
+$color6: #DBA858;
+$color7: #C05C0E;
+
+// Default Font-size ==========================
+$df_fs: "Roboto";
+$df_fz: 12px;
+$df_fw: 300;
+$df_ln: 20px;
+$df_tt: none;
+$df_fc: $color1;
+
+// View Ports =================================
+$df_vw: 100vw; 
+$df_vh: 100vh;
+
+// Spacing ====================================
+$cf_margins: 0;
+$cf_paddings: 0;
+
+// Background =================================
+$bg_hero: "../public/teampicture.JPG";
+$bg_banner01: "../public/banner01.jpg";
+$bg_banner02: "../public/banner02.jpg";

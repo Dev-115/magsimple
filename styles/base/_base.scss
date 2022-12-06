@@ -6,13 +6,12 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    // background-color: coral;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Libre Baskervile', serif, sans-serif;
+    font-family: 'Roboto', serif, sans-serif;
 }
 
 p,
@@ -36,25 +35,6 @@ a {
     }
 }
 
-/* ===== Scrollbar CSS ===== */
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    overflow: overlay;
-    // display: none;
-}
-
-/* Firefox */
-// * {
-//     scrollbar-width: 0;
-//     scrollbar-color: #545454 #ffffff;
-// }
-
-// *::-webkit-scrollbar-track {
-//     background: #ffffff;
-// }
-
-// *::-webkit-scrollbar-thumb {
-//     background-color: #545454;
-//     border-radius: 10px;
-//     border: 3px solid #ffffff;
+// *::-webkit-scrollbar {
+//     overflow: overlay;
 // }

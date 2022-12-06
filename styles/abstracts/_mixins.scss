@@ -11,9 +11,25 @@
 }
 
 // Pages ------------------------------------
-@mixin default_vwh {
+@mixin default_vwh () {
     width: 100vw;
     height: 100vh;
+}
+
+@mixin var_vwh ($df_vw, $df_vh) {
+    width: $df_vw;
+    height: $df_vh;
+}
+
+@mixin default_maxWH() {
+    max-width: 1600px;
+    height: 100%;
+}
+
+// spacing ------------------------------------
+@mixin var_spacings ($cf_margins, $cf_paddings) {
+    margin: $cf_margins;
+    padding: $cf_paddings;
 }
 
 // Flex Config ------------------------------
@@ -81,43 +97,43 @@
     outline: inherit;
 }
 
-// @mixin btn01 {
-//     color: #fff;
-//     background: $color1;
-//     border: 1px solid $color1;
-//     padding: 16px 32px;
-// }
+@mixin btn01 {
+    color: $color5;
+    background: $color1;
+    border: 1px solid $color1;
+    padding: 16px 32px;
+}
 
-// @mixin btn02 {
-//     color: #fff;
-//     background: $color2;
-//     border: 1px solid $color2;
-//     padding: 16px 32px;
-// }
+@mixin btn02 {
+    color: $color5;
+    background: #00000000;
+    border: 1px solid $color5;
+    padding: 16px 32px;
+}
 
-// @mixin btn01_hover {
-//     color: #dadada;
-//     background: $colorhv1;
-//     border: 1px solid $colorhv1;
-// }
+@mixin btn01_hover {
+    color: $color6;
+    background: $color3;
+    border: 1px solid $color3;
+}
 
-// @mixin btn02_hover {
-//     color: #dadada;
-//     background: $colorhv2;
-//     border: 1px solid $colorhv2;
-// }
+@mixin btn02_hover {
+    color: $color1;
+    background: $color5;
+    border: 1px solid $color5;
+}
 
-// @mixin btn01_active {
-//     color: #dadada;
-//     background: $coloract1;
-//     border: 1px solid $coloract1;
-// }
+@mixin btn01_active {
+    color: $color4;
+    background: $color3;
+    border: 1px solid $color3;
+}
 
-// @mixin btn02_active {
-//     color: #dadada;
-//     background: $coloract2;
-//     border: 1px solid $coloract2;
-// }
+@mixin btn02_active {
+    color: $color1;
+    background: $color5;
+    border: 1px solid $color5;
+}
 
 @mixin btn_row_between {
     display: flex;
@@ -128,38 +144,43 @@
     gap: 10px;
 }
 
-// Input ------------------------------------
-// @mixin input_style {
-//     width: 100%;
-//     height: 30px;
-//     padding: 5px 10px;
-//     font-size: 16px;
-//     font-family: inherit;
-//     background: $bg-in;
-// }
+//Input ------------------------------------
+@mixin input_style {
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: inherit;
+    background: $color3;
+}
 
-// @mixin input_removewebkit {
-//     display: none;
-//     -webkit-appearance: none;
-// }
+@mixin input_removewebkit {
+    display: none;
+    -webkit-appearance: none;
+}
 
-// @mixin input_border_clear {
-//     border: 0;
-// }
+@mixin input_border_clear {
+    border: 0;
+}
 
-// @mixin input_border {
-//     border-bottom: 1px solid $color1;
-// }
+@mixin input_border {
+    border-bottom: 1px solid $color4;
+}
 
-// @mixin input_focus {
-//     border: 0;
-//     outline: none;
-//     border-bottom: 2px solid $color1;
-// }
+@mixin input_focus {
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid $color4;
+}
 
 // Box --------------------------------------
 @mixin box_style {
     box-shadow: 2px 2px 5px 5px rgba(102, 102, 102, 0.144);
+}
+
+@mixin border_style {
+    border: 1px solid $color5;
+    border-radius: 10px;
 }
 
 // Border Radius ----------------------------
@@ -186,6 +207,13 @@
     color: #ffffff;
 }
 
+@mixin var_icons {
+    height: 45px;
+    width: 45px;
+    background-color: $color1;
+    border-radius: 50%;
+}
+
 // Images
 @mixin img_ {
     background-position: center;
@@ -205,6 +233,18 @@
     @include img_();
     background-size: 100% 100%;
     // object-fit: fill;
+}
+
+// ------------------------------------------
+
+// Font -------------------------------------
+@mixin var_fonts($df_fs, $df_fz, $df_fw, $df_ln, $df_tt, $df_fc){
+    font: $df_fs;
+    font-size: $df_fz;
+    font-weight: $df_fw;
+    line-height: $df_ln;
+    text-transform: $df_tt;
+    color: $df_fc;
 }
 
 // ------------------------------------------

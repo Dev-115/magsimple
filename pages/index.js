@@ -14,216 +14,242 @@ export default function Home() {
       <Header />
 
       <div className="section_hero">
-        <h1 className="">Welcome to MAGG</h1>
-        <p className="">
-          <code className="">We Design. We build. We Consult</code>
-        </p>
-        <div className="">
-          <button>Button</button>
-          <button>Button</button>
+        <div className="hero_container">
+          {/* <img src='../magsimple/public/teampicture.JPG' /> */}
+          <div className="hero_item">
+            <h1>Welcome to MAGG</h1>
+          </div>
+          <div className="hero_item">
+            <p>
+              <code>We Design. We build. We Consult.</code>
+            </p>
+          </div>
+          <div className="hero_item">
+            <button className="btn_primary">Button</button>
+            <button className="btn_secondary">Button</button>
+          </div>
         </div>
       </div>
 
-      <div className="">
-        <div href="" className="">
-          <i className="bi bi-envelope"></i>
-          <h2>Email</h2>
-          <p>Our friendly team is here to help.</p>
-          <bold>hi@untitled.com</bold>
-        </div>
-
-        <div href="" className="">
-          <i className="bi bi-geo-alt"></i>
-          <h2>Office</h2>
-          <p>Come say hello at our office HQ.</p>
-          <bold>100 smith street collingwood VIC 3066AU</bold>
-
-        </div>
-
-        <div href=""
-          className=""
-        >
-
-          <i className="bi bi-telephone"></i>
-          <h2>Phone</h2>
-          <p>Monday to Friday from 8am to 5pm.</p>
-          <bold>+1(555) 000-0000</bold>
-        </div>
-      </div>
-
-      <div className="">
-
-        <div className=""><h2>ABOUT US</h2></div>
-        <div className="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-
-      </div>
-
-      <div className="">
-
-        <div href="" className="">
-          <i className="bi bi-box-fill"></i>
-          <h2 className="">Medium lenght section heading goes here</h2>
-          <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.</code>
-        </div>
-
-        <div href="" className="">
-          <i className="bi bi-box-fill"></i>
-          <h2 className="">Medium lenght section heading goes here</h2>
-          <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.</code>
-        </div>
-
-        <div href="" className="">
-          <i className="bi bi-box-fill"></i>
-          <h2 className="">Medium lenght section heading goes here</h2>
-          <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-            ex ea commodo consequat.</code>
-        </div>
-
-      </div>
-
-      <div className="">
-        <img
-          src="/placeholder1.png"
-          alt=""
-          width={2500} height={2500}
-          style={{
-            objectFit: 'cover',
-            overflow: 'hidden',
-            zIndex: -2,
-            backgroundPosition: 'center',
-            position: 'sticky',
-            height: '30vh',
-            width: '100%',
-          }}
-        />
-        <div className="">
-          <h2 className="">Medium lenght heading goes here</h2>
-          <code className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.</code>
-        </div>
-
-        <div className="">
-          <button className="">Button[darker]</button>
-          <button className="">Button</button>
-        </div>
-
-
-      </div>
-
-      <div className="">
-        <div className="">
-          <h2 className="">FEATURE WORKS</h2>
-          <code className="" >Lorem ipsum dolor sit amet, consectetur adipiscing elit,</code>
-        </div>
-        <div className="">
-          <img src="/OIP.png" alt="placehold Logo" />
-          <img src="/OIP.png" alt="placehold Logo" />
-          <img src="/OIP.png" alt="placehold Logo" />
-          <img src="/OIP.png" alt="placehold Logo" />
-          <img src="/OIP.png" alt="placehold Logo" />
-          <img src="/OIP.png" alt="placehold Logo" />
+      <div className="section_contact">
+        <div className="contact_container">
+          <div className="contact_item">
+            <div className="contact_subitem">
+              <i className="bi bi-envelope"></i>
+            </div>
+            <h2>Email</h2>
+            <p>Our friendly team is here to help.</p>
+            <bold>hi@untitled.com</bold>
+          </div>
+          <div className="contact_item">
+            <div className="contact_subitem">
+              <i className="bi bi-geo-alt"></i>
+            </div>
+            <h2>Office</h2>
+            <p>Come say hello at our office HQ.</p>
+            <bold>100 smith street collingwood VIC 3066AU</bold>
+          </div>
+          <div className="contact_item">
+            <div className="contact_subitem">
+              <i className="bi bi-telephone"></i>
+            </div>
+            <h2>Phone</h2>
+            <p>Monday to Friday from 8am to 6pm.</p>
+            <bold>+1(555) 000-0000</bold>
+          </div>
         </div>
       </div>
 
-      <div className="">
-        <div className="">
-          <h2 className="">Pricing Plan</h2>
-          <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</code>
+      <div className="section_aboutus">
+        <div className="aboutus_container">
+          <div className="aboutus_item">
+            <h1>ABOUT US</h1>
+          </div>
+          <div className="aboutus_item">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
         </div>
-        <div className="">
-          <a href="" className="">
-            <h2 className="">Basic Plan</h2>
-            <h1 className="">$ 19/mo</h1>
-            <code>or $199 yearly</code>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <button className="">Get Started</button>
-          </a>
-
-          <a href="" className="">
-            <h2 className="">Business Plan</h2>
-            <h1 className="">$ 29/mo</h1>
-            <code>or $299 yearly</code>
-
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <button className="">Get Started</button>
-          </a>
-
-          <a href="" className="">
-            <h2 className="">Enterprise Plan</h2>
-            <h1 className="">$ 49/mo</h1>
-            <code>or $499 yearly</code>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <ul>
-              &#10004; Feature text goes here
-            </ul>
-            <button className="">Get Started</button>
-
-          </a>
-
+      </div>
+      <div className="section_services">
+        <div className="services_container">
+          <div className="services_item">
+            <i className="bi bi-box-fill"></i>
+            <h2 className="">Medium lenght section heading goes here</h2>
+            <code>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </code>
+          </div>
+          <div className="services_item">
+            <i className="bi bi-box-fill"></i>
+            <h2 className="">Medium lenght section heading goes here</h2>
+            <code>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </code>
+          </div>
+          <div className="services_item">
+            <i className="bi bi-box-fill"></i>
+            <h2 className="">Medium lenght section heading goes here</h2>
+            <code>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </code>
+          </div>
         </div>
-
       </div>
 
-      <div className="">
-        <div className="">
-          <h2>Medium lenght heading goes here</h2>
-          <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code>
+      <div className="section_banner">
+        <div className="banner_container">
+          {/* Replace Image Here */}
+          <div className="banner_item">
+            <h1>Medium lenght heading goes here</h1>
+            <code>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </code>
+          </div>
+          <div className="banner_item">
+            <button className="btn_primary">Button</button>
+            <button className="btn_secondary">Button</button>
+          </div>
         </div>
-        <img
+      </div>
+      <div className="section_featwork">
+        <div className="featwork_container">
+          <div className="featwork_item">
+            <h1>FEATURED WORKS</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+          </div>
+          <div className="featwork_item">
+            <img src="/fw01.jpg" alt="placehold Logo" />
+            <img src="/fw02.jpg" alt="placehold Logo" />
+            <img src="/fw03.jpg" alt="placehold Logo" />
+            <img src="/fw03.jpg" alt="placehold Logo" />
+          </div>
+        </div>
+      </div>
+      <div className="section_prices">
+        <div className="prices_container">
+          <div className="prices_item">
+            <h1>Pricing Plan</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+          </div>
+          <div className="prices_item">
+            <div className="prices_subitem">
+              <div className="prices_title">
+                <h2>Basic Plan</h2>
+                <h1>$ 19/mo</h1>
+                <h3>or $199 yearly</h3>
+              </div>
+              <div className="prices_content">
+                <h4>Packages:</h4>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+              </div>
+              <div className="prices_footer">
+                <button className="btn_primary">Get Started</button>
+              </div>
+            </div>
+            <div className="prices_subitem">
+              <div className="prices_title">
+                <h2>Business Plan</h2>
+                <h1>$ 29/mo</h1>
+                <h3>or $299 yearly</h3>
+              </div>
+              <div className="prices_content">
+                <h4>Packages:</h4>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+              </div>
+              <div className="prices_footer">
+                <button className="btn_primary">Get Started</button>
+              </div>
+            </div>
+            <div className="prices_subitem">
+              <div className="prices_title">
+                <h2>Enterprise Plan</h2>
+                <h1>$ 49/mo</h1>
+                <h3>or $499 yearly</h3>
+              </div>
+              <div className="prices_content">
+                <h4>Packages:</h4>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+                <p>
+                  <i className='bi bi-check'></i> Feature text goes here
+                </p>
+              </div>
+              <div className="prices_footer">
+                <button className="btn_primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="section_banner02">
+        <div className="banner_container">
+          <div className="banner_item">
+            <h1>Medium lenght heading goes here</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div className="banner_item">
+            <button className="btn_primary">Button</button>
+            <button className="btn_secondary">Button</button>
+          </div>
+          {/* <img
           src="/placeholder1.png"
           alt=""
           width={2500} height={2500}
@@ -236,100 +262,193 @@ export default function Home() {
             height: '20vh',
             width: '100%',
           }}
-        />
+        /> */}
+        </div>
       </div>
-
-
-      <div className="">
-        <div className="">
-          <h2>Meett our team</h2>
-          <p>Our philosophy is simple -- hire a team of diverse, passionate people and foster
-            a culture that empowers you to do you best work.
-          </p>
-        </div>
-
-        <div className="">
-          <img className="" src="/OIP.png" alt="placehold Logo" />
-          <img className="" src="/OIP.png" alt="placehold Logo" />
-          <img className="" src="/OIP.png" alt="placehold Logo" />
-        </div>
-        <div className="">
-          <img className="" src="/OIP.png" alt="placehold Logo" />
-          <img className="" src="/OIP.png" alt="placehold Logo" />
-          <img className="" src="/OIP.png" alt="placehold Logo" />
-        </div>
-
-
-
-      </div>
-
-      <div className="">
-        <code>Tagline</code>
-        <h2>Contact us</h2>
-        <code>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</code>
-
-        <div className="">
-
-          <div className="">
-            <form method="post" action="./api/hello">
-              <label>Name </label>
-              <input className="" name="Name" id="username" />
-              <br />
-              <label>Email </label>
-              <input className="" name="Email" id="username" />
-              <br />
-              <label>Message </label>
-              <textarea className="" name="Message" id="username"></textarea>
-              <br />
-
-              <input type={'checkbox'} required />
-              <label>I accept the terms and condition of Magg.INC</label>
-              <br />
-
-              <button type='submit'>submit</button>
-            </form>
-
+      <div className="section_team">
+        <div className="team_container">
+          <div className="team_item">
+            <h1>Meet our team</h1>
+            <p>Our philosophy is simple -- hire a team of diverse, passionate people and foster
+              a culture that empowers you to do you best work.
+            </p>
           </div>
+          <div className="team_item">
+            <div className="grid_item">
+              <img src="/teammember02.jpg" alt="placehold Logo" />
+              <div className="gird_subitem">
+                <div className="card_title">
+                  <p>Mark Linsagnan</p>
+                </div>
+                <div className="card_content">
+                  <p>Back End Developer</p>
+                  <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                </div>
+                <div className="card_links">
+                  <i className="bi bi-linkedin"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-google"></i>
+                </div>
+              </div>
+            </div>
+            <div className="grid_item">
+              <img src="/teammember02.jpg" alt="placehold Logo" />
+              <div className="gird_subitem">
+                <div className="card_title">
+                  <p>Mark Linsagnan</p>
+                </div>
+                <div className="card_content">
+                  <p>Back End Developer</p>
+                  <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                </div>
+                <div className="card_links">
+                  <i className="bi bi-linkedin"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-google"></i>
+                </div>
+              </div>
+            </div>
+            <div className="grid_item">
+              <img src="/teammember02.jpg" alt="placehold Logo" />
+              <div className="gird_subitem">
+                <div className="card_title">
+                  <p>Mark Linsagnan</p>
+                </div>
+                <div className="card_content">
+                  <p>Back End Developer</p>
+                  <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                </div>
+                <div className="card_links">
+                  <i className="bi bi-linkedin"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-google"></i>
+                </div>
+              </div>
+            </div>
+            <div className="grid_item">
+              <img src="/teammember03.jpg" alt="placehold Logo" />
+              <div className="gird_subitem">
+                <div className="card_title">
+                  <p>Mark Linsagnan</p>
+                </div>
+                <div className="card_content">
+                  <p>Back End Developer</p>
+                  <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                </div>
+                <div className="card_links">
+                  <i className="bi bi-linkedin"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-google"></i>
+                </div>
+              </div>
+            </div>
+            <div className="grid_item">
+              <img src="/teammember03.jpg" alt="placehold Logo" />
+              <div className="gird_subitem">
+                <div className="card_title">
+                  <p>Mark Linsagnan</p>
+                </div>
+                <div className="card_content">
+                  <p>Back End Developer</p>
+                  <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                </div>
+                <div className="card_links">
+                  <i className="bi bi-linkedin"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-google"></i>
+                </div>
+              </div>
+            </div>
+            <div className="grid_item">
+              <img src="/teammember03.jpg" alt="placehold Logo" />
+              <div className="gird_subitem">
+                <div className="card_title">
+                  <p>Mark Linsagnan</p>
+                </div>
+                <div className="card_content">
+                  <p>Back End Developer</p>
+                  <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                </div>
+                <div className="card_links">
+                  <i className="bi bi-linkedin"></i>
+                  <i className="bi bi-github"></i>
+                  <i className="bi bi-google"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <div className="">
-            <a href="" className="">
+      <div className="section_contactus">
+        <div className="contactus_container">
+          <div className="contactus_item">
+            <h1>Contact us</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <div className="contactus_subitem">
+              <form method="post" action="./api/hello">
+                <label>Name</label>
+                <input className="" name="Name" id="username" />
+                <label>Email</label>
+                <input className="" name="Email" id="username" />
+                <label>Message</label>
+                <textarea className="" name="Message" id="username"></textarea>
+                <input type={'checkbox'} required />
+                <label>I accept the terms and condition of Magg.INC</label>
+                <button className='btn_secondary' type='submit'>submit</button>
+              </form>
+            </div>
+          </div>
+          <div className="contactus_item">
+            <div className="details_item">
               <i className="bi bi-envelope"></i>
-              <h2>Email</h2>
+              <h3>Email</h3>
               <p>Our friendly team is here to help.</p>
               <bold>hi@untitled.com</bold>
-            </a>
-
-            <a href="" className="">
+            </div>
+            <div className="details_item">
               <i className="bi bi-geo-alt"></i>
-              <h2>Office</h2>
+              <h3>Office</h3>
               <p>Come say hello at our office HQ.</p>
               <bold>100 smith street collingwood VIC 3066AU</bold>
-
-            </a>
-
-            <a href="" className="">
+            </div>
+            <div className="details_item">
               <i className="bi bi-telephone"></i>
-              <h2>Phone</h2>
+              <h3>Phone</h3>
               <p>Monday to Friday from 8am to 5pm.</p>
               <bold>+1(555) 000-0000</bold>
-            </a>
+            </div>
           </div>
-
         </div>
-
       </div>
-
-
-
-
-      <footer className="">
-        2022 Magg. All rights reserved.
-
-        <p>Privacy Policy</p>
-        <p>Terms of Service</p>
-        <p>Cookie Settings</p>
-
+      <footer className="main_footer">
+        <div className="footer_box">
+          <div className='footer_item'>
+            <div className='footer_subitem'>
+              <div className='footer_title'>
+                <h1>Logo</h1>
+              </div>
+              <div className='footer_links'>
+                <a><p>Home</p></a>
+                <a><p>About Us</p></a>
+                <a><p>Services</p></a>
+                <a><p>Featured Works</p></a>
+                <a><p>Pricing Plans</p></a>
+                <a><p>MAGG Team</p></a>
+                <a><p>Contact Us</p></a>
+              </div>
+            </div>
+          </div>
+          <div className="footer_item">
+          </div>
+          <div className="footer_item">
+            <p>2022 MAGG. All rights reserved.</p>
+            {/* <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+            <p>Cookie Settings</p> */}
+          </div>
+        </div>
       </footer>
-    </div >
+    </div>
   )
 }

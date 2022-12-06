@@ -2,50 +2,44 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .main_footer {
-    width: 100vw;
-    height: 30vh;
-    background: #16161D;
-    @include flex_prop2();
-    @include flex_center();
+    @include var_vwh(100vw, 250px);
+    @include flex_prop0();
+    background: $color1;
 
-    .flex_box {
+    .footer_box {
+        @include var_vwh(100%, 100%);
         @include flex_prop2();
         @include flex_center();
         gap: 10px;
 
-        .flex_item {
-            color: #F2F3F3;
-
-            h2 {
-                font-size: 36px;
-                line-height: 44.64px;
-                font-weight: 400;
+        .footer_item {
+            @include flex_prop0();
+            h1 {
                 text-align: center;
-                margin: 0;
+                @include var_spacings(0, 0);
+                @include var_fonts(inherit, 48px, 700, 57.6px, capitalize, $color5);
             }
 
-            span {
-                text-align: center;
+            p {
+                @include var_fonts(inherit, 16px, 400, 24px, none, $color6);
             }
 
-            &:last-child {
-                margin-top: 10px;
-
-                a {
-                    margin-right: 10px;
-
-                    &:last-child {
-                        margin-right: 0;
+            &:first-child {
+                @include flex_prop0();
+                .footer_subitem {
+                    .footer_links {
+                        @include flex_prop1();
+                        @include flex_center();
+                        gap: 50px;
                     }
                 }
+            }
 
-                img {
-                    width: 20px;
-                    height: 20px;
-                    vertical-align: middle;
-                }
+            &:nth-child(2) {
+                min-width: 1600px;
+                border-bottom: 1px solid $color5;
+                opacity: 1;
             }
         }
-
     }
 }
