@@ -1,9 +1,42 @@
 import Head from 'next/head'
 // import Image from 'next/image'
 // import styles from '../styles/global.css';
-import Header from '../component/Header'
+import Header from '../component/Header';
+import React from 'react';
 
 export default function Home() {
+  const [name, setName] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [message, setMessage] = React.useState('')
+  const [submitted, setSubmitted] = React.useState(false)
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
+    let data = {
+      name,
+      email,
+      message
+    }
+    fetch('./api/hello', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setName('')
+        setEmail('')
+        setMessage('')
+      }
+    })
+  }
   return (
     <div className="section_body">
       <Head>
@@ -138,7 +171,7 @@ export default function Home() {
             <img src="/fw01.jpg" alt="placehold Logo" />
             <img src="/fw02.jpg" alt="placehold Logo" />
             <img src="/fw03.jpg" alt="placehold Logo" />
-            <img src="/fw03.jpg" alt="placehold Logo" />
+            <img src="/fw01.jpg" alt="placehold Logo" />
           </div>
         </div>
       </div>
@@ -386,16 +419,16 @@ export default function Home() {
             <h1>Contact us</h1>
             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
             <div className="contactus_subitem">
-              <form method="post" action="./api/hello">
+              <form>
                 <label>Name</label>
-                <input className="" name="Name" id="username" />
+                <input className="" onChange={(e) => { setName(e.target.value) }} name="Name" id="username" />
                 <label>Email</label>
-                <input className="" name="Email" id="username" />
+                <input className="" onChange={(e) => { setEmail(e.target.value) }} name="Email" id="username" />
                 <label>Message</label>
-                <textarea className="" name="Message" id="username"></textarea>
+                <textarea className="" onChange={(e) => { setMessage(e.target.value) }} name="Message" id="username"></textarea>
                 <input type={'checkbox'} required />
                 <label>I accept the terms and condition of Magg.INC</label>
-                <button className='btn_secondary' type='submit'>submit</button>
+                <button className='btn_secondary' onClick={(e) => { handleSubmit(e) }}>submit</button>
               </form>
             </div>
           </div>

@@ -1,16 +1,18 @@
 import mailer from "./email";
+// import { createTestAccount, createTransport, getTestMessageUrl } from "nodemailer";
 
 
 export default function handler(req, res) {
-
-
   if (req.method == "POST") {
     try {
       // res.status(200).json({ name: 'John Doe' })
       const body = req.body
+      // console.log(req.body)
+      res.status(200).json({ name: body.name, email: body.email, message: body.message })
 
-      mailer(body.Email, body.Name, body.Message).catch(console.error);
-      res.status(200).json({ name: body.Name, email: body.Email, message: body.Message })
+
+      mailer(body.email, body.name, body.message).catch(console.error);
+
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
